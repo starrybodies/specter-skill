@@ -1,0 +1,12 @@
+{
+  "name": "specter",
+  "description": "SPECTER — the first open-source autonomous GEO agent skill graph. 42 interconnected knowledge nodes covering AI citation intelligence, scraping architecture, x402 micropayments, content velocity, and verification feedback loops.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Gaia AI"
+  },
+  "homepage": "https://github.com/gaiaaiagent/specter-skill",
+  "repository": "https://github.com/gaiaaiagent/specter-skill",
+  "license": "MIT",
+  "keywords": ["geo", "seo", "ai-citation", "scraping", "x402", "content-strategy", "autonomous-agent", "generative-engine-optimization"]
+}
