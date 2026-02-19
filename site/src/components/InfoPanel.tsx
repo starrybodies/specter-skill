@@ -159,48 +159,34 @@ export function InfoPanel({ onClose }: InfoPanelProps) {
           </AsciiBox>
 
           {/* Install */}
-          <AsciiBox title="install & run">
+          <AsciiBox title="install the skill">
             <div className="space-y-3">
               <div>
-                <p className="text-[10px] uppercase tracking-wider text-[#6b7280]">prerequisites</p>
-                <p className="mt-1 text-xs text-[#c0c8d8]">Node.js 20+ and pnpm</p>
-              </div>
-              <div>
-                <p className="text-[10px] uppercase tracking-wider text-[#6b7280]">clone & install</p>
+                <p className="text-[10px] uppercase tracking-wider text-[#6b7280]">claude code plugin</p>
                 <pre className="mt-1 rounded bg-[#12121a] border border-[#1e1e2e] px-3 py-2 text-[11px] text-[#76ff03]">
-{`git clone <repo-url> symbai
-cd symbai && pnpm install`}
+{`/plugin marketplace add starrybodies/specter-skill
+/plugin install specter`}
                 </pre>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-wider text-[#6b7280]">development</p>
-                <pre className="mt-1 rounded bg-[#12121a] border border-[#1e1e2e] px-3 py-2 text-[11px] text-[#76ff03]">
-{`cd apps/specter-ui
-pnpm dev          # → http://localhost:5173`}
-                </pre>
-              </div>
-              <div>
-                <p className="text-[10px] uppercase tracking-wider text-[#6b7280]">production build</p>
-                <pre className="mt-1 rounded bg-[#12121a] border border-[#1e1e2e] px-3 py-2 text-[11px] text-[#76ff03]">
-{`pnpm build        # tsc + vite → dist/
-pnpm preview      # serve the build`}
-                </pre>
-              </div>
-              <div>
-                <p className="text-[10px] uppercase tracking-wider text-[#6b7280]">tech stack</p>
+                <p className="text-[10px] uppercase tracking-wider text-[#6b7280]">what you get</p>
                 <p className="mt-1 text-xs text-[#c0c8d8]">
-                  Vite 6 + React 19 + D3 7 + Tailwind 4 + TypeScript (strict)
+                  A single SKILL.md with all 42 nodes inline — the complete GEO agent
+                  knowledge graph loaded into Claude Code on demand.
                 </p>
-                <p className="mt-0.5 text-xs text-[#c0c8d8]">
-                  No API dependencies — all graph data is static.
-                </p>
+              </div>
+              <div>
+                <p className="text-[10px] uppercase tracking-wider text-[#6b7280]">repo</p>
+                <pre className="mt-1 rounded bg-[#12121a] border border-[#1e1e2e] px-3 py-2 text-[11px] text-[#00e5ff]">
+{`github.com/starrybodies/specter-skill`}
+                </pre>
               </div>
             </div>
           </AsciiBox>
 
           {/* Footer */}
           <div className="text-center text-[10px] text-[#6b7280]">
-            part of the <span className="text-white">symbai</span> monorepo &middot; press <span className="rounded bg-[#1e1e2e] px-1.5 py-0.5 text-[#c0c8d8]">?</span> to toggle this panel
+            <a href="https://github.com/starrybodies/specter-skill" className="text-[#00e5ff] hover:underline">starrybodies/specter-skill</a> &middot; press <span className="rounded bg-[#1e1e2e] px-1.5 py-0.5 text-[#c0c8d8]">?</span> to toggle this panel
           </div>
         </div>
       </div>

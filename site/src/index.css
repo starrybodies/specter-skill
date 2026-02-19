@@ -24,7 +24,57 @@ body {
   background: #0a0a0f;
   color: #c0c8d8;
   margin: 0;
-  overflow: hidden;
+}
+
+/* Landing page specific */
+@keyframes terminalBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes glitchShift {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 1px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 2px); }
+}
+
+@keyframes loopPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes heroScanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typewriter {
+  from { max-width: 0; }
+  to { max-width: 100%; }
+}
+
+.animate-terminal-blink {
+  animation: terminalBlink 1.2s step-end infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 800ms ease-out both;
+}
+
+.hero-scanline::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 50%, rgba(0, 229, 255, 0.02) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
 }
 
 /* Spectral glow effects */
