@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@theme {
+  --color-specter-bg: #0a0a0f;
+  --color-specter-surface: #12121a;
+  --color-specter-border: #1e1e2e;
+  --color-specter-text: #c0c8d8;
+  --color-specter-text-dim: #6b7280;
+  --color-specter-white: #ffffff;
+  --color-cluster-geo: #00e5ff;
+  --color-cluster-scraping: #76ff03;
+  --color-cluster-x402: #ffc400;
+  --color-cluster-content: #e040fb;
+  --color-cluster-verification: #ff6e40;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1e1e2e #0a0a0f;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background: #0a0a0f;
+  color: #c0c8d8;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Spectral glow effects */
+@keyframes ghostPulse {
+  0%, 100% { filter: drop-shadow(0 0 6px currentColor) drop-shadow(0 0 12px currentColor); opacity: 0.9; }
+  50% { filter: drop-shadow(0 0 12px currentColor) drop-shadow(0 0 24px currentColor); opacity: 1; }
+}
+
+@keyframes decidePulse {
+  0%, 100% { filter: drop-shadow(0 0 4px currentColor); opacity: 0.85; }
+  50% { filter: drop-shadow(0 0 14px currentColor) drop-shadow(0 0 28px currentColor); opacity: 1; }
+}
+
+@keyframes ambientBreathe {
+  0%, 100% { opacity: 0.95; }
+  50% { opacity: 1; }
+}
+
+@keyframes selectionRipple {
+  0% { r: 0; opacity: 0.6; stroke-width: 2; }
+  100% { r: 60; opacity: 0; stroke-width: 0.5; }
+}
+
+@keyframes apparitionFadeIn {
+  0% { opacity: 0; filter: blur(8px); }
+  100% { opacity: 1; filter: blur(0); }
+}
+
+@keyframes particleFlow {
+  0% { offset-distance: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+
+@keyframes sparkleFloat {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(-3px); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOutRight {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+.animate-ambient-breathe {
+  animation: ambientBreathe 8s ease-in-out infinite;
+}
+
+.animate-decide-pulse {
+  animation: decidePulse 3s ease-in-out infinite;
+}
+
+.animate-apparition {
+  animation: apparitionFadeIn 600ms ease-out both;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 300ms ease-out both;
+}
+
+.animate-sparkle {
+  animation: sparkleFloat 2s ease-in-out infinite;
+}
+
+/* Terminal-style box */
+.terminal-box {
+  border: 1px solid #1e1e2e;
+  background: #12121a;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.terminal-box-header {
+  border-bottom: 1px solid #1e1e2e;
+  padding: 6px 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6b7280;
+}
+
+/* Neon glow classes */
+.glow-cyan { filter: drop-shadow(0 0 6px #00e5ff) drop-shadow(0 0 12px #00e5ff40); }
+.glow-green { filter: drop-shadow(0 0 6px #76ff03) drop-shadow(0 0 12px #76ff0340); }
+.glow-amber { filter: drop-shadow(0 0 6px #ffc400) drop-shadow(0 0 12px #ffc40040); }
+.glow-purple { filter: drop-shadow(0 0 6px #e040fb) drop-shadow(0 0 12px #e040fb40); }
+.glow-orange { filter: drop-shadow(0 0 6px #ff6e40) drop-shadow(0 0 12px #ff6e4040); }
+.glow-white { filter: drop-shadow(0 0 6px #ffffff) drop-shadow(0 0 12px #ffffff40); }
+
+/* Detail panel scrollbar */
+.detail-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.detail-scroll::-webkit-scrollbar-track {
+  background: #12121a;
+}
+.detail-scroll::-webkit-scrollbar-thumb {
+  background: #1e1e2e;
+  border-radius: 2px;
+}
