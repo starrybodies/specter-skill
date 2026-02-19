@@ -5,8 +5,8 @@
   "author": {
     "name": "Gaia AI"
   },
-  "homepage": "https://github.com/gaiaaiagent/specter-skill",
-  "repository": "https://github.com/gaiaaiagent/specter-skill",
+  "homepage": "https://github.com/starrybodies/specter-skill",
+  "repository": "https://github.com/starrybodies/specter-skill",
   "license": "MIT",
   "keywords": ["geo", "seo", "ai-citation", "scraping", "x402", "content-strategy", "autonomous-agent", "generative-engine-optimization"]
 }

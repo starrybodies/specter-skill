@@ -8,7 +8,7 @@ SPECTER is the first open-source autonomous GEO (Generative Engine Optimization)
 
 ```bash
 # Add the marketplace
-/plugin marketplace add gaiaaiagent/specter-skill
+/plugin marketplace add starrybodies/specter-skill
 
 # Install the plugin
 /plugin install specter
